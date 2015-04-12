@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
-  get 'visitors/new'
+  # get 'contacts/new'
+
+  # get 'contacts/create'
+
+  # get 'visitors/new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  resources :contacts, only: [:new, :create]
   root 'visitors#new'
 
   # Example of regular route:
